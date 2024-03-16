@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Fbpl';
+    src: url(./Freight\ Big\ Pro\ Light.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Fbpl;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    z-index: 11;
+    align-items: center;
+    position: fixed;
+}
+.loader h1{
+    text-align: center;
+    font-family: Fbpl;
+    font-size: 6.9vw;
+    letter-spacing: -3px;
+    line-height: 5vw;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 8;
+}
+.yellow1{
+    width: 100%;
+    height: 100vh;
+    background-color: #f5e31b;
+    position: absolute;
+    z-index: 9;
+}
+.loader video{
+    width: 100%;
+    height: 100vh;
+    position: absolute; 
+    object-fit: cover;
+    z-index: 6;
+}
+.yellow2{
+    width: 100%;
+    height: 100vh;
+    background-color:#F5E41B;
+    position: absolute;
+    z-index: 7;
+}
+nav{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    padding: 2.5vw 4vw 0 4vw;
+    
+    /* background-color: cadetblue; */
+}
+nav svg path{
+    fill: black;
+}
+.page1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #F5E41B;
+}
+.page1 h1{
+    text-align: center;
+    font-family: Fbpl;
+    font-size: 6.9vw;
+    letter-spacing: -3px;
+    line-height: 5vw;
+    font-weight: 500;
+}
+.page2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+}
+.page2 .elems{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+.page2 .elems h2{
+    line-height: 5.5vw;
+    position: relative;
+    z-index: 9;
+    font-size: 7vw;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.page2 .elems .moving{
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    padding: 6px;
+    transform: translateY(-50%) scaleY(0);
+    white-space: nowrap;
+    width: 100%;
+    background-color: #F5E41B;
+    transition: all ease 0.3s;
+
+}
+.page2 .elems .moving .blur{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(#f5e31bf6,#F5E41B,#f5e31bf6) ;
+    box-shadow: 10px 0px 30px 30px #F5E41B, -10px 0px 30px 30px #F5E41B ;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.page2 .elems .moving .moving-in{
+    display: inline-block;
+    color: black;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+.page2 .elems .moving .moving-in h5{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-right: 30px;
+    opacity: 0;
+    transition: all ease 0.8s;
+}
+.elems:hover .moving{
+    transform: translateY(-50%) scaleY(1);
+
+}
+.elems:hover h2{
+font-style: italic;
+color: black;
+}
+.elems:hover .moving .moving-in h5{
+  opacity: 1;
+
+}
+.page3{
+    width: 100%;
+   min-height: 100vh;
+    padding: 40px 20px;
+}
+.img-container{
+    display: flex;
+}
+.img-div{
+    overflow: hidden;
+    position: relative;
+    width: 30vw;
+    height: 37vw;
+    background-color: crimson;
+    margin: 20px 10px;
+}
+
+.img-div .overlay{
+    transition: all ease 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.108);
+    position: absolute;
+    z-index: 9;
+}
+.overlay p{
+    color: white;
+    font-size: 3.3vw;
+    text-align: center;
+    line-height: 2.7vw;
+    text-transform: uppercase;
+opacity: 0;
+}
+.img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 0.6s;
+
+}
+.img-div:hover .overlay{
+    background-color: #000000;
+}
+.img-div:hover .overlay p{
+opacity: 1;
+}
+.img-div:hover img {
+    scale: 1.1;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: 18vw;
+}
+
+.footer i{
+    font-size: 3vw;
+    font-weight: 100;
+   color: #272727;
+}
+.foot{
+    height: 50%;
+    background-color: #000000;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+}
+
+.foot .part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 4%;
+}
+.foot .part1{
+ 
+    gap: 40px;
+    margin-top: 4%;
+}
+
+.footer h2{
+font-size: 1.2vw;
+text-transform: uppercase;
+font-family: sans-serif;
+font-weight: 100;
+margin-bottom: 4vw;
+}
+@keyframes moving {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
